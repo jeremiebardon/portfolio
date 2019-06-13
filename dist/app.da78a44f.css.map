@@ -1,0 +1,1 @@
+{"version":3,"sources":["assets/sass/app.scss"],"names":[],"mappings":"AAEA;EACI,yBAHY","file":"app.da78a44f.css","sourceRoot":"..","sourcesContent":["$primary-color: #FFFFFF;\n\nbody {\n    background-color: $primary-color;\n}"]}
