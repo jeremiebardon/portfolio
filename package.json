@@ -23,7 +23,10 @@
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/register": "^7.4.4",
+    "@popmotion/popcorn": "^0.4.1",
     "browserslist": "^4.6.2",
-    "gulp-babel": "^8.0.0"
+    "gulp-babel": "^8.0.0",
+    "popmotion": "^8.7.0",
+    "swiper": "^4.5.0"
   }
 }

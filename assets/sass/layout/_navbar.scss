@@ -1,0 +1,15 @@
+.nav-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    ul {
+        padding: 1em;
+        text-align: right;
+        li {
+            display: inline-block;
+            padding: .5em 2em;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@keyframes line {
+    from {
+        width: 0px;
+    } to {
+        width: 160px;
+    }
+}
+
+#home-container {
+    @extend %center-items-column;
+    height: 100vh;
+    .inner-wrapper {
+        text-align: center;
+        h1, p, img {
+            opacity: 0;
+            position: relative;
+        }
+        img {
+            width: 64px;
+            margin: 0 auto;
+            margin-bottom: 16px;
+        }
+        h1 {
+            @extend %text-bold;
+            font-size: 1.4em;
+            text-transform: uppercase;
+        }
+        p {
+            @extend %text-regular;
+            font-size: 1em;
+            margin: 8px 0 0 0;
+            position: relative;
+            animation-delay: .2s;
+            &:before {
+                content: ' ';
+                animation: line .2s ease-out 1s forwards;
+                position: absolute;
+                height: 8px;
+                width: 0px;
+                background-color: $primary-color;
+                left: 50%;
+                bottom: 0px;
+                margin-left: -80px;
+                z-index: -1;
+            }
+        }
+    }
+}
+

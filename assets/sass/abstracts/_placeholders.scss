@@ -1,0 +1,44 @@
+%center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+%center-items-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+%text-light {
+    font-family: 'Work Sans Light';
+    color: $text-black;
+}
+
+%text-regular {
+    font-family: 'Work Sans Regular';
+    color: $text-black;
+}
+
+%text-bold {
+    font-family: 'Work Sans Bold';
+    color: $text-black;
+}
+
+%button-rounded {
+    font-family: 'Work Sans Bold';
+    border: 0;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    font-size: 1.8em;
+    border-radius: 50%;
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

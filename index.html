@@ -5,10 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/sass/app.scss" />
-    <title> Huddle </title>
+    <link rel="stylesheet" href="node_modules/swiper/dist/css/swiper.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,800,900&display=swap" rel="stylesheet">
+    <title> Jérémie Bardon - Frontend/UI Developper </title>
+   
 </head>
 <body>
     
+    <!-- Animated line background -->
+    <div class="background-container">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+        <div class="line-4"></div>
+        <div class="line-5"></div>
+        <div class="line-6"></div>
+    </div>
+    <!------------------------------->
+
+
+    <!------------ Menu ------------->
+    <nav class="nav-container">
+          
+    </nav>
+    <!------------------------------->
+
+
+    <div id="home-container">
+        <div class="inner-wrapper">
+            <img src="assets/img/logo.svg" alt="Jérémie bardon personnal logo" />
+            <h1>Hello, I'm Jérémie</h1>
+            <p>Frontend developper & UI Designer</p>
+        </div>
+    </div>
+
+
+    <div id="skills-container">
+        <div id="box-dev">
+            <div class="box-inner-wrapper">
+                <div class="main-content">
+                    <div class="illustration-container">
+                        <img src="assets/img/illustrations/DevIllustration.svg" />
+                    </div>
+                    <div class="text-container">
+                        <h1>Web developper</h1>
+                        <p>Develop and test website with best practice in mind</p>
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="main-skills">
+                        <img src="assets/img/icons/React.svg" alt="react icon" />
+                        <p>React</p>
+                    </div>
+                    <div class="other-skills">
+                        <p>SASS, Bootstrap, Jest, Webpack, Django, Express </p>
+                    </div>
+                </div>
+            </div>
+            <button class="skills-button dev">+</button>
+        </div>
+        <div id="box-design">
+            <div class="box-inner-wrapper">
+                <div class="main-content">
+                    <div class="illustration-container">
+                        <img src="assets/img/illustrations/DesignIllustration.svg" />
+                    </div>
+                    <div class="text-container">
+                        <h1>Web desgigner</h1>
+                        <p> Designing website with good usabilities & colors </p>
+                    </div>  
+                </div>
+                <div class="skills-list">
+                    <div class="main-skills">
+                        <img src="assets/img/icons/Sketch.svg" alt="react icon" />
+                        <p>Sketch</p>
+                    </div>
+                    <div class="other-skills">
+                        <p>Photoshop, Illustrator, Adobe XD, After effect </p>
+                    </div>
+                </div>
+            </div>
+            <button class="skills-button design">+</button>
+        </div>
+    </div>
+
+    <div id="projects-container">
+        <div id="carousel-projects">
+           <div class="item">1</div>
+           <div class="item">2</div>
+           <div class="item">3</div>
+           <div class="item">4</div>
+           <div class="item">5</div>
+        </div>
+    </div>
     <script src="./assets/js/app.js"></script>
+    
 </body>
 </html>

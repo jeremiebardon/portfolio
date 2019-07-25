@@ -1,0 +1,42 @@
+@keyframes line-curtain-slide {
+    from {
+      height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+.background-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    @media only screen and (max-width: 768px)  {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+    div[class^="line"] {
+        border-right: 1px solid #dbdbdb;
+        height: 0%;
+        animation-name: line-curtain-slide;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+        @for $i from 2 through 6 {
+            &:nth-child(#{$i}) {
+                animation-delay: $i * (.5s / 5);
+            }
+        }
+        @media only screen and (max-width: 768px)  {
+            @for $i from 2 through 4 {
+                &:nth-child(#{$i}) {
+                    animation-delay: $i * (.5s / 5);
+                }
+            }
+        }
+    }
+}
