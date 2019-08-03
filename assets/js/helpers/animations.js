@@ -14,6 +14,15 @@ export const homeAnimationText = tween({
     elapsed: 80
 });
 
+export const heightSliderAnimation = tween({
+    from: {height: 0},
+    to: {height: 48},
+    ease: {
+        height: easing.easeIn, 
+    },
+    duration: 100,
+})
+
 export const textAnimOutKeyframe = spring({
     from: {y:0, opacity: 1},
     to: {y: 25, opacity: 0},
@@ -29,3 +38,4 @@ export const textAnimInKeyframe = spring({
     damping: 40,
     duration: 750
 })
+

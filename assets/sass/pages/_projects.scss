@@ -1,3 +1,207 @@
+@keyframes text-reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes button-reveal {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 #projects-container {
-    height: 100vh;
+    padding: 160px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .carousel__container {
+        .glide__slides {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .glide__slide {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                height: 60vh;
+                background-size: 130%;
+                transition: all .3s ease-in-out;
+                .glide__slide__preview {
+                    width: 80%;
+                    text-align: center;
+                    .project__title, .project__skills {
+                        height: 0;
+                        transition: height .3s ease-in-out;
+                        h1, p {
+                            opacity: 0;
+                        }
+                        h1 {
+                            font-size: 1.5em;
+                            @extend %text-bold;
+                            text-transform: uppercase;
+                        }
+                        p {
+                            font-size: 1em;
+                            color: #fff;
+                            @extend %text-bold;
+                            text-transform: uppercase;
+                        }
+                    }
+
+                    .project__title {
+                        width: 100%;
+                        background-color: $primary-color;
+                    }
+    
+                    .project__skills {
+                        width: 75%;
+                        margin:0 auto;
+                        background-color: $text-black;
+                    }
+
+                    .glide__slide__button-fullscreen {
+                        @extend %text-bold;
+                        position: relative;
+                        margin-top: 48px;
+                        border: 0;
+                        opacity: 0;
+                        transform: scale(0);
+                        width: 48px;
+                        height: 48px;
+                        padding: 8px;
+                        font-size: 1.8em;
+                        border-radius: 50%;
+                        background-color:#fff;
+                        color: $secondary-color;
+                        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                        transition: all .2s ease-in-out;
+                        .hover-rounded {
+                            pointer-events: none;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            width: 0px;
+                            height: 0px;
+                            border-radius: 50%;
+                            background-color: $secondary-color;
+                            transition: all .15s ease-in-out;
+
+                        }
+                        p {
+                            pointer-events: none;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            color: #fff;
+                            .hover-rounded {
+                                position: absolute;
+                                width: 48px;
+                                height: 48px;
+                                margin-left: -24px;
+                                margin-top: -24px;
+                                border-radius: 50%;
+                            }
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                       
+                    }
+                }
+
+                &.glide__slide--active {
+                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                    .project__title, .project__skills {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        height: 48px;
+                        h1, p {
+                            animation: text-reveal .3s ease-in-out .2s forwards;
+                        }
+                    }
+
+                    .glide__slide__button-fullscreen {
+                        animation: button-reveal .3s ease-in-out .3s forwards;  
+                    }
+                }
+
+                &.project-1, &.project-2, &.project-3 {
+                    background: url('../../assets/img/projects/project.png') no-repeat center center #031125;
+                }
+            }
+        }
+
+        .glide__arrows {
+            bottom: 2em;
+        }
+
+        .glide__bullets {
+            .glide__bullet {
+                background-color: rgba(#fff, .5);
+                border: 0;
+                &:hover {
+                    border: 2px solid $primary-color;
+                }
+                &.glide__bullet--active {
+                    border: 0 ;
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .carousel__project-container {
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #ffffff;
+        right: 0;
+        z-index: 999;
+    }
+}
+
+.carousel__project-fullScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    opacity: 0;
+    background-color: #ffffff;
+    z-index: -1;
+    .carousel__project__wrapper {
+        width: 980px;
+        height: calc(92vh - 48px);
+        overflow-y: hidden;
+        margin: 0 auto;
+        padding: 24px 0;
+        .carousel__project__image {
+            height: 440px;
+            background: url('../../assets/img/projects/project.png') no-repeat center center #031125;
+        }
+        button {
+            position: fixed;
+            bottom: 24px;
+            width: 54px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
 }

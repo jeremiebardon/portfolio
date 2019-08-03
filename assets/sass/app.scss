@@ -6,8 +6,8 @@
 @import 'abstracts/mixins';
 @import 'abstracts/placeholders';
 
-@import 'components/carousel';
 @import 'components/buttons';
+@import 'components/modal';
 
 @import 'layout/background';
 @import 'layout/navbar';
@@ -15,3 +15,8 @@
 @import 'pages/home';
 @import 'pages/skills';
 @import 'pages/projects';
+
+
+// Import plugins
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
