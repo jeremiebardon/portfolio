@@ -24,6 +24,7 @@
             @extend %text-bold;
             font-size: 1.6em;
             text-transform: uppercase;
+            margin: 16px 0;
         }
         p {
             @extend %text-regular;

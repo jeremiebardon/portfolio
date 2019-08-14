@@ -11,7 +11,7 @@
 </head>
 <body>
     
-    <!-- Animated line background -->
+    <!-- Animated background -->
     <div class="background-container">
         <div class="line-1"></div>
         <div class="line-2"></div>
@@ -23,15 +23,15 @@
     <!------------------------------->
 
 
-    <!------------ Menu ------------->
+    <!------------ MENU ------------->
     <nav id="nav__container">
         <a href="#home-container" class="personnal-logo">
             <img src="assets/img/logo.svg" alt="Jérémie bardon logo" title="Jérémie bardon logo"/>
         </a>
         <ul class="nav-items__container">
-            <li class="nav-item"> <a href="#skills-container" class="skills">Skills</a>  </li>
-            <li class="nav-item"> <a href="#projects-container" class="projects">Projects</a>  </li>
-            <li class="nav-item"> <a href="#about-container" class="about">About</a>  </li>
+            <li class="nav-item"> <a href="#skills-container" class="skills"> Compétences </a>  </li>
+            <li class="nav-item"> <a href="#projects-container" class="projects"> Projets </a>  </li>
+            <li class="nav-item"> <a href="#about-container" class="about"> à propos </a>  </li>
         </ul>
         <a href="#contact-modal" class="button-contact modal-open">
             Contact
@@ -40,23 +40,26 @@
     <!------------------------------->
 
 
+    <!------------ HOME ------------->
     <section id="home-container">
         <div class="inner-wrapper">
             <img src="assets/img/logo.svg" alt="Jérémie bardon logo" title="Jérémie bardon logo" />
-            <h1>Hello, I'm Jérémie</h1>
-            <p>Frontend developper & UI Designer</p>
+            <h1>Salut, je suis Jérémie</h1>
+            <p>Développeur Frontend & UI Designer</p>
         </div>
     </section>
+    <!------------------------------->
 
-
+    <!------------ SKILLS ------------->
     <section id="skills-container">
+        <h1> Compétences </h1>
         <div id="box-dev__wrapper">
             <div class="box-inner-wrapper">
                 <div class="illustration-container">
                     <img src="assets/img/illustrations/DevIllustration.svg" />
                 </div>
                 <div class="text-container">
-                    <h1>Developpement</h1>
+                    <h2>Developpement</h2>
                     <p>Développement d'application interne ou de plateforme grand public</p>
                 </div>
             </div>
@@ -69,7 +72,7 @@
                     <p>SASS, Bootstrap, Jest, Webpack, Django, Express </p>
                 </div>
             </div>
-            <a class="skills-button dev">
+            <a class="btn btn-primary">
                 <span class="hover-rounded"></span>
                 <span class="plus-icon">+</span> 
             </a>
@@ -81,7 +84,7 @@
                     <img src="assets/img/illustrations/DesignIllustration.svg" />
                 </div>
                 <div class="text-container">
-                    <h1>Design</h1>
+                    <h2>Design</h2>
                     <p> Design de solution web grand public ou d'application interne </p>
                 </div> 
             </div>
@@ -94,7 +97,7 @@
                     <p>Photoshop, Illustrator, Adobe XD, After effect </p>
                 </div>
             </div>
-            <a class="skills-button design">
+            <a class="btn btn-primary">
                 <span class="hover-rounded"></span>
                 <span class="plus-icon">+</span> 
             </a>
@@ -106,24 +109,25 @@
                     <img src="assets/img/illustrations/DesignIllustration.svg" />
                 </div>
                 <div class="text-container">
-                    <h1>Webmarketing</h1>
-                    <p> Mise en place d'une stratégie de création d'un business </p>
+                    <h2>Webmarketing</h2>
+                    <p> Mise en place de stratégie pour la création d'un business </p>
                 </div>  
             </div>
             <div class="skills-list">
                 <div class="main-skills">
                         <img src="assets/img/icons/Sketch.svg" alt="react icon" />
-                        <p>Sketch</p>
+                        <p>Business plan </p>
                     </div>
                     <div class="other-skills">
-                        <p>Photoshop, Illustrator, Adobe XD, After effect </p>
+                        <p> SEA, SEO, SMO, Stratégie marketing </p>
                     </div>
                 </div>
-                <a class="skills-button marketing">
+                <a class="btn btn-primary">
                     <span class="hover-rounded"></span>
                     <span class="plus-icon">+</span> 
                 </a>
         </div>
+        <!------------------------------->
 
         <div id="box-tooling__wrapper">
             <div class="box-inner-wrapper">
@@ -131,44 +135,34 @@
                     <img src="assets/img/illustrations/DesignIllustration.svg" />
                 </div>
                 <div class="text-container">
-                    <h1>Tooling</h1>
-                    <p> Designing website with good usabilities & colors </p>
+                    <h2>Tooling</h2>
+                    <p> Outils utilisé pour le travail en équipe et la productivité </p>
                 </div>  
             </div>
             <div class="skills-list">
                 <div class="main-skills">
                     <img src="assets/img/icons/Sketch.svg" alt="react icon" />
-                    <p>Sketch</p>
+                    <p>Git</p>
                 </div>
                 <div class="other-skills">
-                    <p>Photoshop, Illustrator, Adobe XD, After effect </p>
+                    <p> Docker, Jira, Visual studio code, MJML  </p>
                 </div>
             </div>
-            <a class="skills-button tooling">
+            <a class="btn btn-primary">
                 <span class="hover-rounded"></span>
                 <span class="plus-icon">+</span> 
             </a>
         </div>
     </section>
+    <!--------------------------------->
 
+    <!------------ PROJECTS ------------->
+    
     <section id="projects-container">
+        <h1> Projets </h1>
         <div class="carousel__container">
             <div class="glide__track" data-glide-el="track">
               <ul class="glide__slides">
-                <li class="glide__slide project-1" data-name-project="anfh">
-                    <div class="glide__slide__preview">
-                        <div class="project__title">
-                            <h1>anfh</h1>
-                        </div>
-                        <div class="project__skills">
-                            <p>Design/Code</p>
-                        </div>
-                        <button class="glide__slide__button-fullscreen">
-                            <span class="hover-rounded"></span>
-                            <p>+</p>
-                        </button>
-                    </div>
-                </li>
                 <li class="glide__slide project-2" data-name-project="fieldreport">
                     <div class="glide__slide__preview">
                         <div class="project__title">
@@ -177,13 +171,43 @@
                         <div class="project__skills">
                             <p>Design/Code</p>
                         </div>
-                        <button class="glide__slide__button-fullscreen">
+                        <a class="glide__slide__button-fullscreen btn btn-primary white">
                             <span class="hover-rounded"></span>
-                            <p>+</p>
-                         </button>
+                            <span class="plus-icon">+</span> 
+                        </a>
                     </div>
                 </li>
-                <li class="glide__slide project-3" data-name-project="unifaf">
+                <li class="glide__slide project-1" data-name-project="bvacx">
+                    <div class="glide__slide__preview">
+                        <div class="project__title">
+                            <h1>bva cx</h1>
+                        </div>
+                        <div class="project__skills">
+                            <p>Design/Code</p>
+                        </div>
+                        <a class="glide__slide__button-fullscreen btn btn-primary white">
+                            <span class="hover-rounded"></span>
+                            <span class="plus-icon">+</span> 
+                        </a>
+                    </div>
+                </li>
+                
+                <li class="glide__slide project-3" data-name-project="anfh">
+                    <div class="glide__slide__preview">
+                        <div class="project__title">
+                            <h1>anfh</h1>
+                        </div>
+                        <div class="project__skills">
+                            <p>Design/Code</p>
+                        </div>
+                        <a class="glide__slide__button-fullscreen btn btn-primary white">
+                            <span class="hover-rounded"></span>
+                            <span class="plus-icon">+</span>
+                        </a>
+                    </div>
+                </li>
+                
+                <li class="glide__slide project-4" data-name-project="unifaf">
                     <div class="glide__slide__preview">
                         <div class="project__title">
                             <h1>unifaf</h1>
@@ -191,13 +215,27 @@
                         <div class="project__skills">
                             <p>Design/Code</p>
                         </div>
-                        <button class="glide__slide__button-fullscreen">
+                        <a class="glide__slide__button-fullscreen btn btn-primary white">
                             <span class="hover-rounded"></span>
-                            <p>+</p>
-                        </button>
+                            <span class="plus-icon">+</span> 
+                        </a>
                     </div>
-                    
                 </li>
+                <li class="glide__slide project-5" data-name-project="sondageWeb">
+                    <div class="glide__slide__preview">
+                        <div class="project__title">
+                            <h1>Sondages web</h1>
+                        </div>
+                        <div class="project__skills">
+                            <p>Design/Code</p>
+                        </div>
+                        <a class="glide__slide__button-fullscreen btn btn-primary white">
+                            <span class="hover-rounded"></span>
+                            <span class="plus-icon">+</span> 
+                        </a>
+                    </div>
+                </li>
+
               </ul>
             </div>
             <div class="glide__arrows" data-glide-el="controls">
@@ -208,28 +246,152 @@
                 <button class="glide__bullet" data-glide-dir="=0"></button>
                 <button class="glide__bullet" data-glide-dir="=1"></button>
                 <button class="glide__bullet" data-glide-dir="=2"></button>
+                <button class="glide__bullet" data-glide-dir="=3"></button>
+                <button class="glide__bullet" data-glide-dir="=4"></button>
             </div>
         </div>  
     </section>
+    <!----------------------------------->
 
+    <!------------ About ------------->
+    
+    <section id="about-container">
+        <h1> à propos </h1>
+    </section>
+    <!----------------------------------->
+
+    <!------------ PROJECTS - VIEW ------------->
     <div class="carousel__project-fullScreen" id="anfh">
-        Anfh
+        <div class="carousel__project__wrapper">
+            <div class="carousel__project__wrapper__image"></div>
+            <div class="carousel__project__wrapper__content">
+                <h2> Le projet </h2>
+                <p> L'ANFH est un organisme collecteur de fond pour la formation hospitaliére. L'objéctif
+                    était de créer une plateforme pérsonnalisé afin d'administrer et visualiser le résultat des sondages 
+                    lancé par l'organisme en interne. <br> <br>
+
+                    Mon rôle a était de créer le design, l'intégrer et développer les fonctionnalités 
+                    frontend du produit.
+                </p>
+
+                <h2> Logiciels </h2>
+                <p>Photoshop, Illustrator, Visual studio code</p>
+
+                <h2> Languages / Framework / Librairies </h2>
+                <p> Django, HTML/SCSS, AngularJS, Highchart </p>
+            </div>
+        </div>
+
+        <div class="carousel__project__button">
+            <a class="btn btn-fixed">
+                Retour au projets
+            </a>
+        </div>
     </div>
     
+    
     <div class="carousel__project-fullScreen" id="unifaf">
-        Unifaf
+        <div class="carousel__project__wrapper">
+            <div class="carousel__project__wrapper__image">
+                <h1>UNIFAF</h1>
+            </div>
+            <div class="carousel__project__wrapper__content">
+                <h2> Le projet </h2>
+                <p>La plateforme conçu pour UNIFAF leurs permet d'adresser un questionnaire Online en plusieurs étapes à leurs 
+                employés avec la possibilités de les administrer et de consulter les réponses 
+                sur un dashboard pérsonnalisé.</p>
+
+                <h2> Logiciels </h2>
+                <p>Photoshop, Visual studio code</p>
+
+                <h2> Languages / Framework / Librairies </h2>
+                <p>Django, HTML/SCSS, AngularJS, Highchart</p>
+            </div>
+        </div>
+
+        <div class="carousel__project__button">
+            <a class="btn btn-fixed">
+                Retour au projets
+            </a>
+        </div>
     </div>
 
     <div class="carousel__project-fullScreen" id="fieldreport">
         <div class="carousel__project__wrapper">
-            <div class="carousel__project__image"></div>
-            <button>close</button>
-         </div>
+            <div class="carousel__project__wrapper__image"></div>
+            <div class="carousel__project__wrapper__content">
+                <h2> Le projet </h2>
+                <p>Field report est une plateforme interne de BVA. Elle permet de monitorer l'avancement des différentes
+                études du groupe. Cette application est déstiné aux chargés d'études et superviseurs des terrains téléphonique 
+                en interne mais également aux clients externe via un lien pouvant être générer par les équipes projets de BVA. 
+                <br> <br>
+                Mon rôle consistait à designer l'intérface et développer les fonctionnalités Frontend en suivant les règles du software Craftmanships.
+            </p>
 
-         
+                <h2> Logiciels </h2>
+                <p>Photoshop, Illustrator, Visual studio code, Jira, Portainer, Docker, Jenkins</p>
+
+                <h2> Languages/Framework/Librairies </h2>
+                <p>React, React-redux, Redux-saga, Axios, Styled-components, Jest/Enzyme, React-router, Django Rest Framework</p>
+            </div>
+        </div>
+
+        <div class="carousel__project__button">
+            <a class="btn btn-fixed">
+                Retour au projets
+            </a>
+        </div>
     </div>
 
-    
+    <div class="carousel__project-fullScreen" id="bvacx">
+        <div class="carousel__project__wrapper ">
+            <div class="carousel__project__wrapper__image"></div>
+            <div class="carousel__project__wrapper__content">
+                <h2> Le projet </h2>
+                <p>BVA CX est une plateforme multi-tenant du groupe permettant de piloter l'éxpérience utilisateurs des clients BVA.
+                <br><br>
+                Mon rôle consistait à revoir une partie du design UI/UX de la plateforme, designer et développer de nouvelles fonctionnalités.
+                </p>
+
+                <h2> Logiciel </h2>
+                <p>Photoshop, Illustrator, Visual studio code, JIRA</p>
+
+                <h2> Languages/Framework/Librairies </h2>
+                <p>React, React-redux, Redux-saga, Axios, Styled-components, React-router, Django Rest Framework</p>
+            </div>
+        </div>
+
+        <div class="carousel__project__button ">
+            <a class="btn btn-fixed">
+                Retour au projets
+            </a>
+        </div>
+    </div>
+
+    <div class="carousel__project-fullScreen" id="sondageWeb">
+        <div class="carousel__project__wrapper">
+            <div class="carousel__project__wrapper__image"></div>
+            <div class="carousel__project__wrapper__content">
+                <h2> Les projets </h2>
+                <p>Les sondages web de BVA permettent de mesurer la satisfaction des clients par rapport
+                    a leurs produits ou services.
+                </p>
+
+                <h2> Logiciel </h2>
+                <p> Photoshop, Visual studio code, Askia, Litmus </p>
+
+                <h2> Languages/Framework/Librairies </h2>
+                <p> HTML/CSS, MJML </p>
+            </div>
+        </div>
+
+        <div class="carousel__project__button">
+            <a class="btn btn-fixed">
+                Retour au projets
+            </a>
+        </div>
+    </div>
+    <!------------------------------------------>
 
     
 

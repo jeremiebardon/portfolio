@@ -19,7 +19,7 @@
 }
 
 #projects-container {
-    padding: 160px 0;
+    padding: 48px 0 160px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,52 +72,8 @@
                     }
 
                     .glide__slide__button-fullscreen {
-                        @extend %text-bold;
-                        position: relative;
-                        margin-top: 48px;
-                        border: 0;
                         opacity: 0;
-                        transform: scale(0);
-                        width: 48px;
-                        height: 48px;
-                        padding: 8px;
-                        font-size: 1.8em;
-                        border-radius: 50%;
-                        background-color:#fff;
-                        color: $secondary-color;
-                        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-                        transition: all .2s ease-in-out;
-                        .hover-rounded {
-                            pointer-events: none;
-                            position: absolute;
-                            left: 50%;
-                            top: 50%;
-                            width: 0px;
-                            height: 0px;
-                            border-radius: 50%;
-                            background-color: $secondary-color;
-                            transition: all .15s ease-in-out;
-
-                        }
-                        p {
-                            pointer-events: none;
-                        }
-                        &:hover {
-                            cursor: pointer;
-                            color: #fff;
-                            .hover-rounded {
-                                position: absolute;
-                                width: 48px;
-                                height: 48px;
-                                margin-left: -24px;
-                                margin-top: -24px;
-                                border-radius: 50%;
-                            }
-                        }
-                        &:focus {
-                            outline: none;
-                        }
-                       
+                        text-decoration: none;
                     }
                 }
 
@@ -138,7 +94,7 @@
                     }
                 }
 
-                &.project-1, &.project-2, &.project-3 {
+                &.project-1, &.project-2, &.project-3, &.project-4, &.project-5 {
                     background: url('../../assets/img/projects/project.png') no-repeat center center #031125;
                 }
             }
@@ -181,27 +137,56 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 0;
+    height: 100vh;
+    overflow: auto;
     opacity: 0;
     background-color: #ffffff;
     z-index: -1;
     .carousel__project__wrapper {
-        width: 980px;
-        height: calc(92vh - 48px);
-        overflow-y: hidden;
+        max-width: 980px;
+        height: auto;
         margin: 0 auto;
-        padding: 24px 0;
-        .carousel__project__image {
-            height: 440px;
-            background: url('../../assets/img/projects/project.png') no-repeat center center #031125;
+        padding: 24px 0 48px 0;
+        @media screen and (max-width: 1280px) {
+            padding: 0 0 24px 0;
         }
-        button {
-            position: fixed;
-            bottom: 24px;
-            width: 54px;
-            left: 0;
-            right: 0;
+
+        &__image {
+            height: 440px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: url('../../assets/img/projects/project.png') no-repeat center center #031125;
+            
+        }
+
+        &__content {
+            position: relative;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 24px 0 24px 0;
+            h2 {
+                @extend %text-bold;
+                margin-bottom: 8px;
+                text-transform: uppercase;
+            }
+            p {
+                @extend %text-regular;
+                margin-bottom: 24px;
+                line-height: 1.4em;
+            }
+        }
+
+        .carousel__project__content {
+            max-width: 700px;
+            padding: 16px;
             margin: 0 auto;
         }
+    }
+
+    .carousel__project__button {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
     }
 }

@@ -1,0 +1,115 @@
+.btn {
+    &-primary {
+        & > span {
+            pointer-events: none;
+            user-select: none;  
+        }
+        @extend %text-bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 24px;
+        border: 0;
+        width: 48px;
+        height: 48px;
+        font-size: 1.8em;
+        border-radius: 50%;
+        background-color: rgba($secondary-color, .1);
+        color: $secondary-color;
+        box-shadow: 0 14px 28px rgba(0,0,0,0), 0 10px 10px rgba(0,0,0,0);
+        transition: all .2s ease-in-out;
+
+        .plus-icon {
+            top: 4px;
+        }
+
+        .hover-rounded {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 0px;
+            height: 0px;
+            border-radius: 50%;
+            background-color: $secondary-color;
+            transition: all .15s ease-in-out;
+        }
+
+        &.active {
+            transform: rotate(45deg);
+            transform-origin: center;
+            background-color: $secondary-color;
+            color: #ffffff;
+            box-shadow: 0 3px 12px 2px rgba($secondary-color, 0.4);
+        }
+        &:hover {
+            cursor: pointer;
+            color: #fff;
+            .hover-rounded {
+                position: absolute;
+                width: 48px;
+                height: 48px;
+                margin-left: -24px;
+                margin-top: -24px;
+                border-radius: 50%;
+            }
+        }
+        &:focus {
+            outline: none;
+        }
+
+        &.white {
+            background-color: #fff;
+            color: $secondary-color;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    &-secondary {
+        @extend %text-bold;
+        font-size: .8em;
+        text-transform: uppercase;
+        max-width: 180px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #fff;
+        padding: 16px 32px;
+      
+        color: $text-black;
+        transition: all .3s ease-in;
+        &:hover {
+            cursor: pointer;
+            background-color: $secondary-color;
+            color: #fff;
+        }
+    }
+
+    &-fixed {
+        @extend %text-regular;
+        font-size: 1em;
+        text-transform: uppercase;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #fff;
+        padding: 16px 32px;
+        border-top: 1px solid #dbdbdb;
+        color: $text-black;
+        transition: all .3s ease-in;
+        &:hover {
+            cursor: pointer;
+            background-color: $secondary-color;
+            color: #fff;
+        }
+    }
+
+    
+}
